@@ -25,6 +25,23 @@ The goal is to identify optimal portfolios using the Sharpe ratio and visualize 
 
 ---
 
+## Mathematical Formulation
+
+Portfolio expected return is computed as:
+
+E[R_p] = w^T μ
+
+Portfolio volatility is computed as:
+
+σ_p = sqrt(w^T Σ w)
+
+where:
+- w is the vector of portfolio weights
+- μ is the vector of annualized expected returns
+- Σ is the annualized covariance matrix of asset returns
+
+---
+
 ## Results and Analysis
 
 - The S&P 500 ETF (SPY) achieved the highest Sharpe ratio among manually constructed portfolios
@@ -32,8 +49,8 @@ The goal is to identify optimal portfolios using the Sharpe ratio and visualize 
 - Diversified portfolios reduced volatility but did not outperform SPY under naive weighting schemes
 - Simulation identified portfolios with superior Sharpe ratios, demonstrating that optimal allocation requires systematic optimization rather than heuristic diversification
   
-- Maximum Sharpe portfolio: Sharpe ≈ 0.59, Return ≈ 10.60%, Volatility ≈ 17.93%
-- Optimal weights: AAPL 4.01%, MSFT 0.28%, SPY 95.71%
+- Maximum Sharpe portfolio: Sharpe ≈ 0.592, Return ≈ 10.54%, Volatility ≈ 17.82%
+- Optimal weights: AAPL 1.23%, MSFT 0.47%, SPY 98.30%
 
 The optimal portfolio is heavily weighted toward SPY, reflecting its lower volatility and strong risk-adjusted performance relative to individual equities.
 
@@ -44,6 +61,13 @@ The optimal portfolio is heavily weighted toward SPY, reflecting its lower volat
 This analysis demonstrates that portfolio performance must be evaluated on a risk-adjusted basis. 
 While individual assets may generate higher returns, their volatility reduces overall efficiency. 
 Monte Carlo simulation enables systematic exploration of the allocation space, revealing portfolios that outperform naive allocations.
+
+---
+
+## Limitations
+
+This analysis is based on historical returns and assumes stationarity of asset behavior. 
+Results are sensitive to the chosen time period and do not account for transaction costs, market impact, or changing correlations.
 
 ---
 
